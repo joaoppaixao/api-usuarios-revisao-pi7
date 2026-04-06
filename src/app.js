@@ -1,5 +1,6 @@
 import express from "express"
-import router from "./routes/usuariosRoute.js"
+import usuariosRoute from "./routes/usuariosRoute.js"
+import infoRoute from "./routes/infoRoute.js"
 import { logger } from "./middlewares/loggerMiddleware.js";
 
 
@@ -11,6 +12,8 @@ app.use(express.json());
 app.use(logger);
 
 // rotas
-app.use(router);
+app.use(usuariosRoute);
+app.use(infoRoute);
+
 
 export default app;
